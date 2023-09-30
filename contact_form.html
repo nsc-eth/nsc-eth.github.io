@@ -84,6 +84,33 @@
                         console.error("Error:", error);
                     });
                 });
+                // Define and create the formData object
+    var formData = new FormData();
+    
+    // Append form data to the formData object
+    formData.append("name", "John");
+    formData.append("email", "john@example.com");
+    // Append other form fields as needed
+    
+    // Make a fetch request using the formData object
+    fetch("http://localhost/your_project_folder/process_form.php", {
+        method: "POST",
+        body: formData,
+    })
+    .then(function (response) {
+        if (!response.ok) {
+            throw new Error("Server response was not OK");
+        }
+        return response.text(); // Get the response text from the server
+    })
+    .then(function (data) {
+        // Process the response data here
+        console.log(data);
+    })
+    .catch(function (error) {
+        console.error("Error:", error);
+    });
+
 
             </script>
             
