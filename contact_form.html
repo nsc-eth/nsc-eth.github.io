@@ -9,7 +9,7 @@
 	
 </head>
 <body >
-    <img src="https://cdn.britannica.com/12/12-004-A40EEB6F/Flag-Ethiopia.jpg" alt="Ethiopian Flag" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+    
 	<header>
 		<div class="container">
 			<h1>Contact Us</h1>
@@ -50,7 +50,7 @@
             <div id="phoneNumberDisplay"></div>
         
             <script>
-                fetch("https://nsc-eth.github.io/process_form.php", {
+                fetch("process_form.php", {
     // ...
 });
 
@@ -84,33 +84,9 @@
                         console.error("Error:", error);
                     });
                 });
-                // Define and create the formData object
-    var formData = new FormData();
-    
-    // Append form data to the formData object
-    formData.append("name", "John");
-    formData.append("email", "john@example.com");
-    // Append other form fields as needed
-    
-    // Make a fetch request using the formData object
-    fetch("https://nsc-eth.github.io/process_form.php", {
-        method: "POST",
-        body: formData,
-    })
-    .then(function (response) {
-        if (!response.ok) {
-            throw new Error("Server response was not OK");
-        }
-        return response.text(); // Get the response text from the server
-    })
-    .then(function (data) {
-        // Process the response data here
-        console.log(data);
-    })
-    .catch(function (error) {
-        console.error("Error:", error);
-    });
-
+                fetch("process_form.php", {
+    // ...
+})
 
             </script>
             
