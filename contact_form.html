@@ -50,7 +50,7 @@
             <div id="phoneNumberDisplay"></div>
         
             <script>
-                fetch("nsc-eth.github.io/process_form.php", {
+                fetch("https://nsc-eth.github.io/process_form.php", {
     // ...
 });
 
@@ -84,26 +84,6 @@
                         console.error("Error:", error);
                     });
                 });
-        
-
-fetch("https://nsc-eth.github.io/process_form.php", {
-    method: "POST",
-    body: formData,
-})
-.then(function (response) {
-    if (!response.ok) {
-        throw new Error("Server response was not OK");
-    }
-    return response.text(); // Get the response text from the server
-})
-.then(function (data) {
-    // Process the response data here
-    console.log(data);
-})
-.catch(function (error) {
-    console.error("Error:", error);
-});
-
 
             </script>
             
