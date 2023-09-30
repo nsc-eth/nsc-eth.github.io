@@ -50,12 +50,9 @@
             <div id="phoneNumberDisplay"></div>
         
             <script>
-                fetch("https://nsc-eth.github.io/proxy.php", {
-    method: "POST",
-    body: formData,
-})
-
-;
+                fetch("nsc-eth.github.io/process_form.php", {
+    // ...
+});
 
                 document.getElementById("contactForm").addEventListener("submit", function (event) {
                     event.preventDefault(); // Prevent the form from submitting the traditional way
